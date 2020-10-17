@@ -902,8 +902,8 @@ body main .category .group .link::before {
 body main .category .group .link a {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-  -webkit-text-decoration-color: #A8ADAF;
-          text-decoration-color: #A8ADAF;
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
 }
 
 body main .category .group .link a:hover {
