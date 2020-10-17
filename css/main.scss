@@ -739,7 +739,7 @@ body {
           }
           a {
             text-decoration-line:underline;
-            text-decoration-color:$light-grey;
+            text-decoration-color:transparent;
 
             &:hover {
               text-decoration-color:$light-green;
