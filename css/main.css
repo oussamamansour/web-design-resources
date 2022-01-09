@@ -1,21 +1,20 @@
+@charset "UTF-8";
 /* @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@300;700&display=swap'); */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Rubik&family=Roboto:wght@400;700&display=swap");
 @font-face {
-  font-family: 'Operator Mono';
+  font-family: "Operator Mono";
   src: url("../webfonts/OperatorMono-Medium.woff2") format("woff2"), url("../webfonts/OperatorMono-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Antikor Mono';
+  font-family: "Antikor Mono";
   src: url("../webfonts/AntikorMono-Regular.woff2") format("woff2"), url("../webfonts/AntikorMono-Regular.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
-
 .light-white {
   background-color: #F6F8FA;
 }
@@ -315,8 +314,7 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Antikor Mono", monospace;
 }
 
@@ -360,77 +358,64 @@ body {
   background-color: #F6F8FA;
   overflow: hidden;
 }
-
 body .wrapper {
   max-width: 110rem;
   margin: 0 auto;
 }
-
 body header {
   padding-bottom: 10rem;
-  background-color: #282c34;
+  background: linear-gradient(45deg, #243841, #061C26);
   color: #F6F8FA;
   height: 68rem;
   position: relative;
   font-family: "Segoe Ui", sans-serif;
 }
-
 body header nav {
   height: 10rem;
   font-family: "Segoe Ui", sans-serif;
+  display: flex;
+  align-items: center;
 }
-
 body header nav .navbar-label {
-  display: inline-block;
-  float: left;
   font-weight: 800;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   margin: 0;
-  line-height: 10rem;
   color: #FFF;
-  font-family: inherit;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-
 body header nav .navbar-label span {
   color: #FFCC00;
   font-family: inherit;
 }
-
 body header nav .navbar-list {
-  display: inline-block;
-  float: right;
+  display: flex;
   margin: 0;
+  margin-left: auto;
   padding: 0;
 }
-
 body header nav .navbar-list .navbar-list-item {
-  display: inline-block;
   line-height: 10rem;
-  font-size: 1.6rem;
-  float: left;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
 }
-
 body header nav .navbar-list .navbar-list-item a {
-  display: inline-block;
-  padding: 0 1.5rem;
-  line-height: 5rem;
-  border-radius: 2.5rem;
+  display: block;
+  padding: 0 2rem;
+  line-height: 3.5rem;
+  border-radius: 1rem;
 }
-
 body header nav .navbar-list .navbar-list-item a:hover {
-  color: #FFCC00;
+  background-color: rgba(255, 255, 255, 0.1);
 }
-
 body header .left-wrapper {
   width: 50%;
   float: left;
   height: 45rem;
 }
-
 body header .left-wrapper .master-heading {
   margin: 9rem 0 3rem 0;
   padding-right: 10rem;
@@ -440,63 +425,52 @@ body header .left-wrapper .master-heading {
   font-family: "Segoe Ui", sans-serif;
   line-height: 1;
 }
-
 body header .left-wrapper .master-heading span {
   color: white;
   font-family: "Segoe Ui", sans-serif;
 }
-
 body header .left-wrapper .welcome-text {
   font-size: 1.7rem;
   word-spacing: -3px;
-  line-height: 1.5;
+  line-height: 1.7;
   color: #E5E7EB;
   margin: 0 0 2rem 0;
   padding-right: 10rem;
 }
-
 body header .left-wrapper .action-btn {
   display: inline-block;
-  width: 18.5rem;
+  width: 18rem;
   line-height: 5rem;
-  padding: 0 1.4rem 0 1.7em;
-  border-radius: 2.5rem;
+  text-align: center;
+  padding: 0 1.2rem 0 1.7em;
+  border-radius: 0.75rem;
   border: 3px solid #FFCC00;
   background-color: transparent;
   color: #FFF;
   font-size: 2rem;
   font-family: "Segoe Ui", sans-serif;
   font-weight: 800;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
-  -webkit-transition-property: border, background, padding;
+  transition: all 0.1s ease-in-out;
   transition-property: border, background, padding;
 }
-
 body header .left-wrapper .action-btn:hover {
   background-color: #FFCC00;
   color: #282c34;
-  padding: 0 1.2em;
+  padding: 0 1.1em;
 }
-
 body header .left-wrapper .action-btn:hover i {
   opacity: 1;
   padding-left: 2px;
 }
-
 body header .left-wrapper .action-btn:active {
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+  transform: translateY(1px);
 }
-
 body header .left-wrapper .action-btn i {
   line-height: 5rem;
   opacity: 0;
   padding-left: 0;
-  -webkit-transition: padding .1s ease-in-out;
-  transition: padding .1s ease-in-out;
+  transition: padding 0.1s ease-in-out;
 }
-
 body header .right-wrapper {
   width: 50%;
   height: 46rem;
@@ -507,7 +481,6 @@ body header .right-wrapper {
   background-position: -4rem -3rem;
   background-repeat: no-repeat;
 }
-
 body header .custom-shape-divider-bottom-1599949113 {
   position: absolute;
   bottom: 0;
@@ -515,24 +488,20 @@ body header .custom-shape-divider-bottom-1599949113 {
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
-
 body header .custom-shape-divider-bottom-1599949113 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 52px;
 }
-
 body header .custom-shape-divider-bottom-1599949113 .shape-fill {
   fill: #F6F8FA;
 }
-
 body footer {
   padding: 12rem 0 3rem;
-  background-color: #282c34;
+  background: linear-gradient(45deg, #243841, #061C26);
   color: #F6F8FA;
   position: relative;
   line-height: 4rem;
@@ -541,25 +510,20 @@ body footer {
       -ms-user-select: none;
           user-select: none;
 }
-
 body footer .right-wrapper {
   float: right;
 }
-
 body footer .left-wrapper {
   float: left;
 }
-
 body footer .footer-text {
   margin: 0;
   line-height: 3rem;
   font-size: 1.7rem;
 }
-
 body footer .footer-text .heart {
   color: #EA4335;
 }
-
 body footer .footer-text .creator {
   line-height: 1.6;
   display: inline-block;
@@ -572,49 +536,40 @@ body footer .footer-text .creator {
   text-underline-position: under;
   padding-bottom: 1px;
 }
-
 body footer .footer-list-copyright {
   margin: 0;
   font-size: 1.4rem;
 }
-
 body footer .footer-list-wrapper {
   margin: 0;
 }
-
 body footer .footer-list-wrapper > * {
   display: inline-block;
 }
-
 body footer .footer-list-wrapper .footer-list-item {
   color: #FFF;
   border-radius: 2.5rem;
   overflow: hidden;
   font-size: 1.4rem;
 }
-
 body footer .footer-list-wrapper .footer-list-item:first-of-type {
   margin-left: -1.5rem;
 }
-
 body footer .footer-list-wrapper .footer-list-item button {
   display: inline-block;
   padding: 0 1.5rem;
   color: inherit;
   line-height: 4rem;
 }
-
 body footer .footer-list-wrapper .footer-list-item button:hover {
   background-color: rgba(255, 255, 255, 0.05);
 }
-
 body footer .footer-list-wrapper .footer-list-item-divider {
   color: #34A853;
   padding: 0 1rem;
   font-weight: 800;
   vertical-align: top;
 }
-
 body footer .custom-shape-divider-top-1599949937 {
   position: absolute;
   top: 0;
@@ -623,18 +578,15 @@ body footer .custom-shape-divider-top-1599949937 {
   overflow: hidden;
   line-height: 0;
 }
-
 body footer .custom-shape-divider-top-1599949937 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 52px;
 }
-
 body footer .custom-shape-divider-top-1599949937 .shape-fill {
   fill: #F6F8FA;
 }
-
 body .privacy-card {
   width: 100vw;
   height: 100vh;
@@ -644,7 +596,6 @@ body .privacy-card {
   background-color: rgba(26, 26, 26, 0.8);
   z-index: 3;
 }
-
 body .privacy-card .privacy-card-wrapper {
   width: 100rem;
   height: 60rem;
@@ -659,17 +610,14 @@ body .privacy-card .privacy-card-wrapper {
   line-height: 1.6;
   overflow: hidden;
 }
-
 body .privacy-card .privacy-card-wrapper .privacy-card-text {
   height: 50rem;
   overflow-y: hidden;
   background-color: #FFF;
   padding: 6rem 8.5rem 6rem 7rem;
-  -webkit-box-shadow: 0px 10px 7px -10px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 10px 7px -10px rgba(0, 0, 0, 0.3);
   font-size: 1.6rem;
 }
-
 body .privacy-card .privacy-card-wrapper .privacy-card-text h2 {
   color: #282c34;
   margin: 0 0 2rem 0;
@@ -684,16 +632,13 @@ body .privacy-card .privacy-card-wrapper .privacy-card-text h2 {
   text-underline-position: under;
   padding-bottom: 1px;
 }
-
 body .privacy-card .privacy-card-wrapper .privacy-card-text h3 {
   color: #0066FF;
 }
-
 body .privacy-card .privacy-card-btns-wrapper {
   height: 10rem;
   padding: 2.5rem 2.5rem;
 }
-
 body .privacy-card .privacy-card-btns-wrapper .privacy-card-read-text-btn {
   width: 5rem;
   height: 5rem;
@@ -706,43 +651,30 @@ body .privacy-card .privacy-card-btns-wrapper .privacy-card-read-text-btn {
   line-height: 2rem;
   padding: 0;
 }
-
 body .privacy-card .privacy-card-btns-wrapper .privacy-card-read-text-btn i {
   line-height: 5rem;
 }
-
 body .privacy-card .privacy-card-btns-wrapper .privacy-card-category-btn {
   display: inline-block;
   background-color: #FFCC00;
   color: #282c34;
-  -webkit-box-shadow: 0px 10px 7px -10px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 10px 7px -10px rgba(0, 0, 0, 0.3);
   border-radius: 2.5rem;
   margin-right: 1rem;
   padding: 0 2rem;
   line-height: 5rem;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  -webkit-transition: ease-in-out 200ms;
   transition: ease-in-out 200ms;
-  -webkit-transition-property: -webkit-box-shadow, -webkit-transform;
-  transition-property: -webkit-box-shadow, -webkit-transform;
   transition-property: box-shadow, transform;
-  transition-property: box-shadow, transform, -webkit-box-shadow, -webkit-transform;
 }
-
 body .privacy-card .privacy-card-btns-wrapper .privacy-card-category-btn:hover {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 body .privacy-card .privacy-card-btns-wrapper .privacy-card-category-btn.active {
   background-color: #282c34;
   color: #FFCC00;
 }
-
 body .privacy-card .privacy-card-btns-wrapper .privacy-card-accept-btn {
   display: inline-block;
   border-radius: 2.5rem;
@@ -751,35 +683,23 @@ body .privacy-card .privacy-card-btns-wrapper .privacy-card-accept-btn {
   line-height: 5rem;
   padding: 0 2rem;
   float: right;
-  -webkit-transition: background .1s ease-in-out;
-  transition: background .1s ease-in-out;
+  transition: background 0.1s ease-in-out;
   cursor: not-allowed;
 }
-
 body .privacy-card .privacy-card-btns-wrapper .privacy-card-accept-btn.bottom-reached {
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  -webkit-transition: ease-in-out 200ms;
   transition: ease-in-out 200ms;
-  -webkit-transition-property: -webkit-box-shadow, -webkit-transform;
-  transition-property: -webkit-box-shadow, -webkit-transform;
   transition-property: box-shadow, transform;
-  transition-property: box-shadow, transform, -webkit-box-shadow, -webkit-transform;
   background-color: #34A853;
   cursor: pointer;
 }
-
 body .privacy-card .privacy-card-btns-wrapper .privacy-card-accept-btn.bottom-reached:hover {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 body main {
   padding: 10rem 0;
 }
-
 body main .heading {
   line-height: 1.6;
   display: inline-block;
@@ -799,7 +719,6 @@ body main .heading {
   font-weight: 800;
   font-family: "Segoe Ui", sans-serif;
 }
-
 body main .sub-category {
   display: block;
   margin: 0 2rem 1rem 0;
@@ -809,21 +728,17 @@ body main .sub-category {
   line-height: 5rem;
   font-family: "Segoe Ui", sans-serif;
 }
-
 body main .category {
   padding: 0 1.5rem;
   margin-bottom: 4rem;
 }
-
 body main .category:last-of-type {
   margin-bottom: 0;
 }
-
 body main .category .group {
   margin: 0 0 1.5rem 0;
   padding: 0;
 }
-
 body main .category .group .image-item {
   display: inline-block;
   padding: 0;
@@ -831,32 +746,27 @@ body main .category .group .image-item {
   overflow: hidden;
   margin: 0 1.5rem 1rem 0 !important;
 }
-
 body main .category .group .image-item figure {
   margin: 0;
   background-color: #F2F4F9;
 }
-
 body main .category .group .image-item .item-img {
   padding: 2rem 0;
   border: 7px solid #FFF;
   border-bottom: 0;
   border-radius: 2rem 2rem 0 0;
 }
-
 body main .category .group .image-item .item-img img {
   display: block;
   margin: 0 auto;
   width: 6rem;
   border-radius: 50%;
 }
-
 body main .category .group .image-item .item-text {
   padding: 1.5rem 2rem;
   background-color: #282c34;
   word-spacing: -2px;
 }
-
 body main .category .group .image-item .item-text .item-label {
   display: block;
   font-size: 1.6rem;
@@ -864,14 +774,12 @@ body main .category .group .image-item .item-text .item-label {
   color: #FFCC00;
   font-weight: 600;
 }
-
 body main .category .group .image-item .item-text .item-description {
   margin: 0;
   font-size: 1.2rem;
   line-height: 2rem;
   color: #F2F4F9;
 }
-
 body main .category .group .link {
   display: block;
   text-decoration: none;
@@ -885,73 +793,62 @@ body main .category .group .link {
   line-height: 4rem;
   margin-bottom: 1rem;
 }
-
 body main .category .group .link::before {
-  content: '';
+  content: "";
   display: block;
-  width: .6rem;
-  height: .6rem;
+  width: 0.6rem;
+  height: 0.6rem;
   border-radius: 50%;
   background-color: #21BDB9;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   position: absolute;
   left: 0;
   top: 1.5rem;
 }
-
 body main .category .group .link a {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-  -webkit-text-decoration-color: transparent;
-          text-decoration-color: transparent;
+  -webkit-text-decoration-color: #A8ADAF;
+          text-decoration-color: #A8ADAF;
 }
-
 body main .category .group .link a:hover {
   -webkit-text-decoration-color: #21BDB9;
           text-decoration-color: #21BDB9;
   color: #21BDB9;
 }
-
 body main .category .group .link.source {
   color: #21BDB9;
   -webkit-text-decoration-color: #21BDB9;
           text-decoration-color: #21BDB9;
 }
-
 body main .category .group .link sup {
   line-height: 1;
 }
-
 body main .font-generator {
   padding-right: 30rem;
 }
-
 body main .font-generator .font-generator-field-wrapper {
   position: relative;
   height: 6rem;
   margin-bottom: 3rem;
   border-radius: 2.5rem;
   overflow: hidden;
-  -webkit-box-shadow: 1px 22px 61px -20px rgba(0, 0, 0, 0.25);
   box-shadow: 1px 22px 61px -20px rgba(0, 0, 0, 0.25);
 }
-
 body main .font-generator .font-generator-field-wrapper .clear-field-btn {
   display: block;
   width: 5rem;
   height: 5.4rem;
   position: absolute;
-  top: .3rem;
+  top: 0.3rem;
   right: 15rem;
   background-color: #FFF;
   color: #788585;
   padding: 0;
 }
-
 body main .font-generator .font-generator-field-wrapper .clear-field-btn:active + .font-generator-field:required:valid {
   border-color: #6ecb3c;
 }
-
 body main .font-generator .font-generator-field-wrapper .font-generator-field {
   display: inline-block;
   width: calc(100% - 15rem);
@@ -961,18 +858,16 @@ body main .font-generator .font-generator-field-wrapper .font-generator-field {
   padding: 0 calc(5rem + 5px) 0 2.5rem;
   border: none;
   line-height: 6rem;
-  font-family: 'Droid Arabic Kufi', 'Antikor Mono';
+  font-family: "Droid Arabic Kufi", "Antikor Mono";
   font-size: 1.7rem;
   outline: none;
   border-radius: 2.5rem 0 0 2.5rem;
   border: 2px solid transparent;
   border-right: none;
 }
-
 body main .font-generator .font-generator-field-wrapper .font-generator-field:required:focus:valid, body main .font-generator .font-generator-field-wrapper .font-generator-field:required:focus {
   border-color: #6ecb3c;
 }
-
 body main .font-generator .font-generator-field-wrapper .font-generator-btn {
   display: inline-block;
   width: 15rem;
@@ -985,12 +880,11 @@ body main .font-generator .font-generator-field-wrapper .font-generator-btn {
   font-size: 1.7rem;
   font-weight: 800;
   line-height: 1;
-  line-height: .7;
+  line-height: 0.7;
   padding: 0;
   cursor: pointer;
   font-family: "Segoe Ui", sans-serif;
 }
-
 body main .font-generator .text-output {
   margin: 0 0 1.5rem 0;
   padding: 5rem 5rem;
@@ -999,100 +893,78 @@ body main .font-generator .text-output {
   font-weight: 400;
   position: relative;
   overflow-wrap: break-word;
-  -webkit-box-shadow: 0px 10px 46px -25px #282c34;
   box-shadow: 0px 10px 46px -25px #282c34;
   background-color: #282c34;
   color: #FFF;
   border-radius: 2rem;
 }
-
 body main .font-generator .text-output.open-sans {
   font-family: "Open Sans", sans-serif;
 }
-
 body main .font-generator .text-output.ubuntu {
   font-family: "Ubuntu", sans-serif;
 }
-
 body main .font-generator .text-output.segoe-ui {
   font-family: "Segoe Ui", sans-serif;
   font-weight: 800;
 }
-
 body main .font-generator .text-output.source-sans-pro {
   font-family: "Source Sans Pro", sans-serif;
 }
-
 body main .font-generator .text-output.lato {
   font-family: "Lato", sans-serif;
 }
-
 body main .font-generator .text-output.montserrat {
   font-family: "Montserrat", sans-serif;
 }
-
 body main .font-generator .text-output.roboto {
   font-family: "Roboto", sans-serif;
 }
-
 body main .font-generator .text-output.biorhyme {
   font-family: "BioRhyme", serif;
 }
-
 body main .font-generator .text-output.poppins {
   font-family: "Poppins", sans-serif;
 }
-
 body main .font-generator .text-output.rubik {
   font-family: "Rubik", sans-serif;
 }
-
 body main .font-generator .text-output.raleway {
   font-family: "Raleway", sans-serif;
 }
-
 body main .font-generator .text-output.droid-arabic-kufi {
   font-family: "Droid Arabic Kufi", "Arial", sans-serif;
 }
-
 body main .font-generator .text-output.source-code-pro {
   font-family: "Source Code Pro", sans-serif;
   letter-spacing: -1px;
 }
-
 body main .font-generator .text-output.operator-mono {
   font-family: "Operator Mono", monospace;
 }
-
 body main .font-generator .text-output.fira-mono {
   font-family: "Fira Mono", monospace;
 }
-
 body main .font-generator .text-output.antikor-mono {
   font-family: "Antikor Mono", monospace;
 }
-
 body main .font-generator .text-output::before {
   content: open-quote;
   color: #FFCC00;
   font-size: 4rem;
   font-family: inherit;
 }
-
 body main .font-generator .fonts-wrapper {
   background-color: #F2F4F9;
   border-radius: 2rem;
-  -webkit-box-shadow: 0px 10px 46px -25px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 10px 46px -25px rgba(0, 0, 0, 0.3);
   border: 7px solid #FFF;
   margin-bottom: 1.5rem;
 }
-
 body main .font-generator .fonts-wrapper .group {
   padding: 3rem 2.5rem 2rem 3rem;
   margin: 0;
 }
-
 body main .font-generator .fonts-wrapper .font {
   font-size: 1.6rem !important;
   padding: 0 2rem !important;
@@ -1102,102 +974,74 @@ body main .font-generator .fonts-wrapper .font {
   margin: 0 1rem 1rem 0 !important;
   border-radius: 2.5rem;
   font-weight: normal !important;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  -webkit-transition: ease-in-out 200ms;
   transition: ease-in-out 200ms;
-  -webkit-transition-property: -webkit-box-shadow, -webkit-transform;
-  transition-property: -webkit-box-shadow, -webkit-transform;
   transition-property: box-shadow, transform;
-  transition-property: box-shadow, transform, -webkit-box-shadow, -webkit-transform;
 }
-
 body main .font-generator .fonts-wrapper .font:hover {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 body main .font-generator .fonts-wrapper .font.open-sans {
   font-family: "Open Sans", sans-serif;
 }
-
 body main .font-generator .fonts-wrapper .font.ubuntu {
   font-family: "Ubuntu", sans-serif;
 }
-
 body main .font-generator .fonts-wrapper .font.segoe-ui {
   font-family: "Segoe Ui", sans-serif;
   font-weight: 800;
 }
-
 body main .font-generator .fonts-wrapper .font.source-sans-pro {
   font-family: "Source Sans Pro", sans-serif;
 }
-
 body main .font-generator .fonts-wrapper .font.lato {
   font-family: "Lato", sans-serif;
 }
-
 body main .font-generator .fonts-wrapper .font.montserrat {
   font-family: "Montserrat", sans-serif;
 }
-
 body main .font-generator .fonts-wrapper .font.roboto {
   font-family: "Roboto", sans-serif;
 }
-
 body main .font-generator .fonts-wrapper .font.biorhyme {
   font-family: "BioRhyme", serif;
 }
-
 body main .font-generator .fonts-wrapper .font.poppins {
   font-family: "Poppins", sans-serif;
 }
-
 body main .font-generator .fonts-wrapper .font.rubik {
   font-family: "Rubik", sans-serif;
 }
-
 body main .font-generator .fonts-wrapper .font.raleway {
   font-family: "Raleway", sans-serif;
 }
-
 body main .font-generator .fonts-wrapper .font.droid-arabic-kufi {
   font-family: "Droid Arabic Kufi", "Arial", sans-serif;
 }
-
 body main .font-generator .fonts-wrapper .font.source-code-pro {
   font-family: "Source Code Pro", sans-serif;
   letter-spacing: -1px;
 }
-
 body main .font-generator .fonts-wrapper .font.operator-mono {
   font-family: "Operator Mono", monospace;
 }
-
 body main .font-generator .fonts-wrapper .font.fira-mono {
   font-family: "Fira Mono", monospace;
 }
-
 body main .font-generator .fonts-wrapper .font.antikor-mono {
   font-family: "Antikor Mono", monospace;
 }
-
 body main .font-generator .fonts-wrapper .font.active {
   background-color: #3D4347 !important;
   color: #F6F8FA;
 }
-
 body main hr {
   width: 25rem;
   margin: 0 auto 2rem;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
   border: none;
 }
-
 body main hr::after {
   line-height: 1.6;
   display: inline-block;
@@ -1209,29 +1053,24 @@ body main hr::after {
           text-decoration-color: #FFCC00;
   text-underline-position: under;
   padding-bottom: 1px;
-  content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
+  content: "              ";
   display: block;
   text-underline-position: auto;
   line-height: 5rem;
   font-size: 3rem;
-  -webkit-transform: translateY(-1rem);
-          transform: translateY(-1rem);
+  transform: translateY(-1rem);
 }
-
 body main .color-generator {
   padding-right: 30rem;
 }
-
 body main .color-generator .colors-group-text {
   margin-bottom: 1.5rem;
 }
-
 body main .color-generator .colors-group-text .color-chosen-label {
   display: inline-block;
   margin: 0;
   line-height: 5rem;
 }
-
 body main .color-generator .colors-group-text .color-chosen {
   display: inline-block;
   margin: 0;
@@ -1241,42 +1080,35 @@ body main .color-generator .colors-group-text .color-chosen {
   line-height: 4rem;
   border-radius: 1rem;
 }
-
 body main .color-generator .colors-group-text .color-chosen-value {
   width: 5px;
   opacity: 0;
 }
-
 body main .color-generator .colors-group-wrapper {
   border-radius: 3rem;
   margin-bottom: 3.5rem;
   overflow: hidden;
-  -webkit-box-shadow: 0px 10px 46px -25px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 10px 46px -25px rgba(0, 0, 0, 0.3);
 }
-
 body main .color-generator .colors-group-wrapper .color-categories-wrapper {
   background-color: #282c34;
   padding: 4rem;
   text-align: center;
   border-radius: 3rem 3rem 0 0;
 }
-
 body main .color-generator .colors-group-wrapper .color-categories-wrapper .color-category {
   width: 7rem;
   height: 7rem;
   padding: 0;
   margin: 0 1.5rem 0 0;
   border: 3px solid transparent;
-  border-radius: 29% 71% 47% 53% / 35% 33% 67% 65%;
+  border-radius: 29% 71% 47% 53%/35% 33% 67% 65%;
 }
-
 body main .color-generator .colors-group-wrapper .color-categories-wrapper .color-category.active {
   position: relative;
 }
-
 body main .color-generator .colors-group-wrapper .color-categories-wrapper .color-category.active::before {
-  content: '';
+  content: "";
   display: block;
   width: 1rem;
   height: 1rem;
@@ -1286,11 +1118,9 @@ body main .color-generator .colors-group-wrapper .color-categories-wrapper .colo
   bottom: -2.5rem;
   background-color: inherit;
 }
-
 body main .color-generator .colors-group-wrapper .color-categories-wrapper .color-category:last-of-type {
   margin-right: 0;
 }
-
 body main .color-generator .colors-group-wrapper .colors-wrapper {
   background-color: #F2F4F9;
   padding: 3.5rem 2.5rem 2rem 3.5rem;
@@ -1299,7 +1129,6 @@ body main .color-generator .colors-group-wrapper .colors-wrapper {
   border-radius: 0 0 3rem 3rem;
   margin: 0;
 }
-
 body main .color-generator .colors-group-wrapper .colors-wrapper .color {
   display: block;
   float: left;
@@ -1307,24 +1136,15 @@ body main .color-generator .colors-group-wrapper .colors-wrapper .color {
   width: 8rem;
   height: 8rem;
   margin: 0 1rem 1.5rem 0;
-  border-radius: 29% 71% 47% 53% / 35% 33% 67% 65%;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 29% 71% 47% 53%/35% 33% 67% 65%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  -webkit-transition: ease-in-out 200ms;
   transition: ease-in-out 200ms;
-  -webkit-transition-property: -webkit-box-shadow, -webkit-transform;
-  transition-property: -webkit-box-shadow, -webkit-transform;
   transition-property: box-shadow, transform;
-  transition-property: box-shadow, transform, -webkit-box-shadow, -webkit-transform;
 }
-
 body main .color-generator .colors-group-wrapper .colors-wrapper .color:hover {
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 body main .images {
   margin-left: 0 !important;
 }
@@ -1334,21 +1154,18 @@ body main .images {
   width: 7rem;
   height: 7rem;
   background-color: #FFCC00;
-  border-radius: 37% 63% 47% 53% / 35% 33% 67% 65%;
+  border-radius: 37% 63% 47% 53%/35% 33% 67% 65%;
   cursor: pointer;
   position: fixed;
   right: 5rem;
   bottom: 4rem;
-  -webkit-box-shadow: 0px 10px 12px -10px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 10px 12px -10px rgba(0, 0, 0, 0.3);
   opacity: 0;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   z-index: -1;
 }
-
 .scroll-top::after {
-  content: '\f077';
+  content: "";
   display: inline-block;
   width: 7rem;
   text-align: center;
@@ -1361,9 +1178,7 @@ body main .images {
   font-size: 2.4rem;
   color: #1A1A1A;
 }
-
 .scroll-top.show {
   opacity: 1;
   z-index: 2;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
