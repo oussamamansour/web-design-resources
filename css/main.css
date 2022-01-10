@@ -1106,6 +1106,8 @@ body main .color-generator .colors-group-wrapper .color-categories-wrapper .colo
 }
 body main .color-generator .colors-group-wrapper .color-categories-wrapper .color-category.active {
   position: relative;
+  transform: translateY(-3.2rem);
+  margin-bottom: -2.8rem;
 }
 body main .color-generator .colors-group-wrapper .color-categories-wrapper .color-category.active::before {
   content: "";

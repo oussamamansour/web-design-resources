@@ -942,6 +942,8 @@ body {
             
             &.active {
               position:relative;
+              transform: translateY(-3.2rem);
+              margin-bottom: -2.8rem;
 
               &::before {
                 content:'';
