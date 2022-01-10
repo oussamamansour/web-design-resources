@@ -187,9 +187,10 @@ colors.forEach((color) => {
         colorChosen.style.backgroundColor = '#' + hexColor;
 
         // Copy color value to clipboard
-        colorChosenValue.value = hexColor;
-        colorChosenValue.select();
-        document.execCommand("copy")
+        ///colorChosenValue.value = hexColor;
+        ///colorChosenValue.select();
+        ///document.execCommand("copy")
+        navigator.clipboard.writeText(hexColor);
 
     })
 })
