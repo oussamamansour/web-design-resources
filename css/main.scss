@@ -298,66 +298,83 @@ body {
   font-size:1.8rem;
   background-color:$light-white;
   overflow:hidden;
+  position:relative;
 
   .wrapper {
     max-width:110rem;
     margin:0 auto;
-  }  
-  header {
-    padding-bottom:10rem;
-    background:linear-gradient(45deg, #243841, #061C26);
-    color:$light-white;
-    height:68rem;
-    position:relative;
+  }
+
+  nav {
+    height:8rem;
     font-family:$segoe-ui;
-        
-    nav {
-      height:10rem;
-      font-family:$segoe-ui;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:10;
+    background-color:transparent;
+    color:$white;
+    transition:background .2s ease-in-out;
+
+    &.scroll {
+      background-color:#142933;
+      //box-shadow:0 2px 3px rgba($white,0.1);
+    }
+
+    .wrapper {
       display:flex;
+      height:100%;
       align-items:center;
-      
-      .navbar-label {
-        //display:block;
-        //float:left;
-        font-weight:800;
-        font-size:1.8rem;
-        margin:0;
-        color:$white;
-        user-select: none;
+    }
+    
+    .navbar-label {
+      font-weight:800;
+      font-size:1.8rem;
+      margin:0;
+      color:inherit;
+      user-select: none;
 
-        span {
-          color:$yellow;
-          font-family:inherit
-        }
+      span {
+        color:$yellow;
+        font-family:inherit
       }
-      .navbar-list {
+    }
+    .navbar-list {
+      display:flex;
+      margin:0;
+      margin-left:auto;
+      padding:0;
+      
+      .navbar-list-item {
+        line-height:8rem;
+        font-size:1.5rem;
         display:flex;
-        margin:0;
-        margin-left:auto;
-        padding:0;
+        align-items:center;
         
-        .navbar-list-item {
-          line-height:10rem;
-          font-size:1.5rem;
-          display:flex;
-          align-items:center;
-          
-          a {
-            display:block;
-            padding:0 2rem;
-            line-height:3.5rem;
-            border-radius:1rem;
+        a {
+          display:block;
+          padding:0 2rem;
+          line-height:3.5rem;
+          border-radius:1rem;
 
-            &:hover {
-              //color:$yellow;
-              background-color:rgba($white,.1);
-            }
+          &:hover {
+            //color:$yellow;
+            background-color:rgba($white,.1);
           }
         }
       }
     }
-
+  }
+  header {
+    padding-bottom:10rem;
+    color:$light-white;
+    height:68rem;
+    position:relative;
+    font-family:$segoe-ui;
+    padding-top:10rem;
+    background:linear-gradient(45deg, #243841, #061C26);
+        
     .left-wrapper {
       width:50%;
       float:left;
@@ -457,6 +474,7 @@ body {
     }
   }
 
+
   footer {
     padding:12rem 0 3rem;
     background:linear-gradient(45deg, #243841, #061C26);
@@ -542,7 +560,7 @@ body {
     top:0;
     left:0;
     background-color:rgba($black,.8);
-    z-index:3;
+    z-index:100;
 
     .privacy-card-wrapper {
       width:100rem;

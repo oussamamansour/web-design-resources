@@ -357,59 +357,75 @@ body {
   font-size: 1.8rem;
   background-color: #F6F8FA;
   overflow: hidden;
+  position: relative;
 }
 body .wrapper {
   max-width: 110rem;
   margin: 0 auto;
 }
-body header {
-  padding-bottom: 10rem;
-  background: linear-gradient(45deg, #243841, #061C26);
-  color: #F6F8FA;
-  height: 68rem;
-  position: relative;
+body nav {
+  height: 8rem;
   font-family: "Segoe Ui", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: transparent;
+  color: #FFF;
+  transition: background 0.2s ease-in-out;
 }
-body header nav {
-  height: 10rem;
-  font-family: "Segoe Ui", sans-serif;
+body nav.scroll {
+  background-color: #142933;
+}
+body nav .wrapper {
   display: flex;
+  height: 100%;
   align-items: center;
 }
-body header nav .navbar-label {
+body nav .navbar-label {
   font-weight: 800;
   font-size: 1.8rem;
   margin: 0;
-  color: #FFF;
+  color: inherit;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-body header nav .navbar-label span {
+body nav .navbar-label span {
   color: #FFCC00;
   font-family: inherit;
 }
-body header nav .navbar-list {
+body nav .navbar-list {
   display: flex;
   margin: 0;
   margin-left: auto;
   padding: 0;
 }
-body header nav .navbar-list .navbar-list-item {
-  line-height: 10rem;
+body nav .navbar-list .navbar-list-item {
+  line-height: 8rem;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
 }
-body header nav .navbar-list .navbar-list-item a {
+body nav .navbar-list .navbar-list-item a {
   display: block;
   padding: 0 2rem;
   line-height: 3.5rem;
   border-radius: 1rem;
 }
-body header nav .navbar-list .navbar-list-item a:hover {
+body nav .navbar-list .navbar-list-item a:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+body header {
+  padding-bottom: 10rem;
+  color: #F6F8FA;
+  height: 68rem;
+  position: relative;
+  font-family: "Segoe Ui", sans-serif;
+  padding-top: 10rem;
+  background: linear-gradient(45deg, #243841, #061C26);
 }
 body header .left-wrapper {
   width: 50%;
@@ -594,7 +610,7 @@ body .privacy-card {
   top: 0;
   left: 0;
   background-color: rgba(26, 26, 26, 0.8);
-  z-index: 3;
+  z-index: 100;
 }
 body .privacy-card .privacy-card-wrapper {
   width: 100rem;
