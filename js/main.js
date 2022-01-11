@@ -50,6 +50,7 @@ function niceScrollSetup(element, color) {
         enablemousewheel:true,
         horizrailenabled: false,
         cursorborderradius: ".8rem",
+        zindex:"50"
     });
 }
 niceScrollSetup(document.body,"#FFCC00");
@@ -68,7 +69,17 @@ $(window).scroll(function() {
     }
 });
 var scrollToMain = new SmoothScroll('.action-btn, .navbar-list-item-link', {
-    speed:500
+    speed:500,
+    offset:90
+});
+
+var navbar = $('nav');
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 100) {
+        navbar.addClass('scroll');
+    } else {
+        navbar.removeClass('scroll');
+    }
 });
 
 //    document.querySelector('.privacy-card-wrapper').addEventListener('focusout', (btn) => {
